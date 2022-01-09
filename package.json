@@ -1,11 +1,12 @@
 {
   "dependencies": {
-    "parcel": "^2.1.1"
+    "@parcel/transformer-sass": "^2.1.1",
+    "parcel": "^2.1.1",
+    "sass": "^1.47.0"
   },
   "name": "infotecs-task",
   "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "src/js/controller.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"

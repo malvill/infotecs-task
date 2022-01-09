@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-weight: $font-weight-main;
+  font-family: $font-family-main;
+}
+
+.title {
+  font-weight: $font-weight-bold;
+}
+
+.main {
+  font-size: $font-size-main;
+}
