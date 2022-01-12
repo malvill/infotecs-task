@@ -9,9 +9,15 @@ html {
 }
 
 .title {
+  text-align: center;
   font-weight: $font-weight-bold;
 }
 
 .main {
   font-size: $font-size-main;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
 }

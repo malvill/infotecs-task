@@ -9,6 +9,7 @@ html {
 }
 
 .title {
+  text-align: center;
   font-weight: 400;
 }
 
@@ -16,17 +17,21 @@ html {
   font-size: 1.4rem;
 }
 
-.table-wrapper {
+.wrapper {
   width: 50%;
-  padding: 1rem;
-  background-color: #efefef;
-  border-radius: 0.4rem;
   margin: 0 auto;
 }
 
-.table {
-  table-layout: fixed;
+.table-wrapper {
+  padding: 1rem;
+  background-color: #efefef;
+  border-radius: 0.7rem;
   width: 100%;
+}
+
+.table {
+  width: 100%;
+  table-layout: fixed;
   text-align: left;
   border-collapse: collapse;
 }
@@ -52,19 +57,48 @@ html {
 
 .row {
   width: 100%;
-  background-color: #ffffff;
-  line-height: 1.6rem;
+  background-color: #efefef;
+  line-height: 1.9rem;
+}
+
+.spacer {
+  height: 1rem;
+  background-color: #efefef;
 }
 
 .cell {
   vertical-align: top;
   padding: 0.5rem 1rem 0.21rem;
+  background-color: #ffffff;
+  border: none;
 }
-
-.short {
+.cell_short {
   display: -webkit-box;
   overflow-y: hidden;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+.cell:first-child {
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+}
+.cell:last-child {
+  border-bottom-right-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.pagination {
+  position: relative;
+  float: right;
+  min-width: 4rem;
+  padding: 1rem 2rem;
+}
+.pagination__btn_previous {
+  position: absolute;
+  left: 0;
+}
+.pagination__btn_next {
+  position: absolute;
+  right: 0;
 }
 /*# sourceMappingURL=index.7778c26e.css.map */

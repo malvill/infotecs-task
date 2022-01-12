@@ -1,14 +1,13 @@
 .table-wrapper {
-  width: 50%;
   padding: 1rem;
   background-color: $color-table-bg;
-  border-radius: 0.4rem;
-  margin: 0 auto;
+  border-radius: $border-radius;
+  width: 100%;
 }
 
 .table {
-  table-layout: fixed;
   width: 100%;
+  table-layout: fixed;
   text-align: left;
   border-collapse: collapse;
   &__header {
@@ -34,19 +33,55 @@
 
 .row {
   width: 100%;
-  background-color: $color-row-bg;
-  line-height: 1.6rem;
+  background-color: $color-table-bg;
+  line-height: 1.9rem;
+}
+
+.spacer {
+  height: 1rem;
+  background-color: $color-table-bg;
 }
 
 .cell {
   vertical-align: top;
   padding: .5rem 1rem .21rem;
+  background-color: $color-row-bg;
+  border: none;
+
+  &_short {
+    display: -webkit-box;
+    overflow-y: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &:first-child {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
 }
 
-.short {
-  display: -webkit-box;
-  overflow-y: hidden;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+.pagination {
+  position: relative;
+  float: right;
+  min-width: 4rem;
+  padding: 1rem 2rem;
+
+  &__btn {
+    &_previous {
+      position: absolute;
+      left: 0;
+    }
+    &_next {
+      position: absolute;
+      right: 0;
+    }
+  }
 }
+
 
