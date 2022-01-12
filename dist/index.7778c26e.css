@@ -35,23 +35,43 @@ html {
   text-align: left;
   border-collapse: collapse;
 }
-.table__header {
+
+.table-header__container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.table-header__text {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   padding: 0.5rem 1rem 0.5rem;
 }
-.table__header:nth-child(1) {
+.table-header__sort {
+  width: 1.5rem;
+  height: 1.8rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+.table-header__sort-icon:first-child {
+  position: absolute;
+  top: 0;
+}
+.table-header__sort-icon:last-child {
+  position: absolute;
+  bottom: 0;
+}
+.table-header:nth-child(1) {
   width: 25%;
 }
-.table__header:nth-child(2) {
+.table-header:nth-child(2) {
   width: 25%;
 }
-.table__header:nth-child(3) {
+.table-header:nth-child(3) {
   width: 30%;
 }
-.table__header:nth-child(4) {
+.table-header:nth-child(4) {
   width: 20%;
 }
 

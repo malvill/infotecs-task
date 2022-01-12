@@ -7,8 +7,13 @@ function controlPagination(goToPage) {
     paginationView.render(model.state);
 }
 
+function controlSorting(criteria, direction) {
+
+}
+
 function init() {
     controlPagination(1);
+    tableView.addHandlerSort()
     paginationView.addHandlerPageClick(controlPagination);
 }
 

@@ -3,8 +3,17 @@ import { View } from "./view";
 class TableView extends View {
     _data;
     _parentElement = document.querySelector('tbody')
+    _tableHeader = document.querySelector('thead')
 
-
+    addHandlerSort(handler) {
+        this._tableHeader.addEventListener('click', function (e) {
+            const sortBtn = e.target.closest('.table-header__sort-icon');
+            if (!sortBtn) return;
+            const criteria = sortBtn.closest('.table-header').id;
+            const direction = sortBtn.dataset.direction;
+            handler(criteria, direction);
+        });
+    }
 
     _generateMarkup() {
         return this._data.map(this._generateRowMarkup).join('');

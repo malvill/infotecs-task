@@ -9,23 +9,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/index.7778c26e.css">
 
     <script src="/index.05cf099e.js" defer=""></script>
 </head>
 <body>
     <div class="wrapper">
+
         <h1 class="title">list of tennis lovers</h1>
         <main class="main">
             <div class="table-wrapper">
                 <table class="table">
                     <thead>
-                    <tr class="table__headers">
-                        <th class="table__header">First name</th>
-                        <th class="table__header">Last name</th>
-                        <th class="table__header">About</th>
-                        <th class="table__header">Eye color</th>
-                    </tr>
+                        <tr>
+                            <th class="table-header" id="firstName">
+                                <div class="table-header__container">
+                                    <span class="table-header__text">First name</span>
+                                    <div class="table-header__sort">
+                                        <i class="table-header__sort-icon bx bxs-chevron-up" data-direction="up"></i>
+                                        <i class="table-header__sort-icon bx bxs-chevron-down" data-direction="down"></i>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="table-header" id="lastName">
+                                <div class="table-header__container">
+                                    <span class="table-header__text">Last name</span>
+                                    <div class="table-header__sort">
+                                        <i class="table-header__sort-icon bx bxs-chevron-up" data-direction="up"></i>
+                                        <i class="table-header__sort-icon bx bxs-chevron-down" data-direction="down"></i>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="table-header" id="About">
+                                <div class="table-header__container">
+                                    <span class="table-header__text">About</span>
+                                    <div class="table-header__sort">
+                                        <i class="table-header__sort-icon bx bxs-chevron-up" data-direction="up"></i>
+                                        <i class="table-header__sort-icon bx bxs-chevron-down" data-direction="down"></i>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="table-header" id="eyeColor">
+                                <div class="table-header__container">
+                                    <span class="table-header__text">Eye color</span>
+                                    <div class="table-header__sort">
+                                        <i class="table-header__sort-icon bx bxs-chevron-up" data-direction="up"></i>
+                                        <i class="table-header__sort-icon bx bxs-chevron-down" data-direction="down"></i>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
                     </thead>
 
                     <tbody>
