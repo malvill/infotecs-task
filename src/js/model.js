@@ -5,6 +5,7 @@ export const state = {
     users: data,
     page: 1,
     resultsPerPage: 10,
+    sorting: {}
 }
 
 function transformUsersData() {
@@ -18,6 +19,12 @@ function transformUsersData() {
     })
 }
 
+function addSortingState() {
+    for (const prop in state.users) {
+        state.sorting.prop = false;
+    }
+}
+
 export function getUsersPage(page = state.page) {
     state.page = page;
 
@@ -27,4 +34,21 @@ export function getUsersPage(page = state.page) {
     return state.users.slice(start, end);
 }
 
-transformUsersData()
+export function sortUsers(criteria, direction) {
+    if (state.sorting[criteria] === direction) return
+
+    const orderNumber = direction === 'up' ? 1 : -1;
+    state.users.sort((user1, user2) => {
+        if (user1[criteria] < user2[criteria]) {
+            return orderNumber;
+        }
+        if (user1[criteria] < user2[criteria]) {
+            return -orderNumber;
+        }
+        return 0
+    })
+
+}
+
+transformUsersData();
+addSortingState()
