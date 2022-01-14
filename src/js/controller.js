@@ -8,13 +8,14 @@ function controlPagination(goToPage) {
 }
 
 function controlSorting(criteria, direction) {
-
+    model.sortUsers(criteria, direction);
+    tableView.render(model.getUsersPage());
 }
 
 function init() {
     controlPagination(1);
-    tableView.addHandlerSort()
     paginationView.addHandlerPageClick(controlPagination);
+    tableView.addHandlerSort(controlSorting)
 }
 
 init()

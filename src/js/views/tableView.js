@@ -2,13 +2,21 @@ import { View } from "./view";
 
 class TableView extends View {
     _data;
-    _parentElement = document.querySelector('tbody')
-    _tableHeader = document.querySelector('thead')
+    _parentElement = document.querySelector('tbody');
+    _sortBtnClicked;
 
     addHandlerSort(handler) {
-        this._tableHeader.addEventListener('click', function (e) {
+        const tableHeader = document.querySelector('thead');
+        tableHeader.addEventListener('click', function (e) {
             const sortBtn = e.target.closest('.table-header__sort-icon');
-            if (!sortBtn) return;
+
+            if (this._sortBtnClicked) {
+                if (sortBtn.isSameNode(this._sortBtnClicked)) return;
+                this._sortBtnClicked.classList.remove('table-header__sort-icon_clicked');
+            }
+
+            sortBtn.classList.add('table-header__sort-icon_clicked');
+            this._sortBtnClicked = sortBtn;
             const criteria = sortBtn.closest('.table-header').id;
             const direction = sortBtn.dataset.direction;
             handler(criteria, direction);

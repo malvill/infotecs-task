@@ -35,6 +35,10 @@
   }
 
   &__sort-icon {
+    &_clicked {
+      color: $color-row-bg;
+    }
+
     &:first-child {
       position: absolute;
       top: 0
