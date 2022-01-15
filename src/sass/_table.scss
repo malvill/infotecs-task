@@ -16,7 +16,23 @@
   &__container {
     display: flex;
     justify-content: left;
+    flex-direction: column;
+  }
+
+  &__upper {
+    display: flex;
+    justify-content: left;
     align-items: center;
+  }
+
+  &__hide-icon {
+    padding-left: 1rem;
+    padding-bottom: .5rem;
+    width: 25%;
+    @extend %transition;
+    &:hover {
+      color: $color-row-bg;
+    }
   }
 
   &__text {
@@ -35,6 +51,10 @@
   }
 
   &__sort-icon {
+    @extend %transition;
+    &:hover {
+      color: $color-row-bg;
+    }
     &_clicked {
       color: $color-row-bg;
     }

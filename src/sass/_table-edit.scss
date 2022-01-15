@@ -1,0 +1,47 @@
+.table-edit {
+  margin-left: 1rem;
+  position: absolute;
+  width: 50%;
+  left: 100%;
+  top: 0;
+
+  &__form {
+    width: 100%;
+    position: absolute;
+    background-color: $color-table-bg;
+    border-radius: $border-radius;
+    padding: .7rem;
+  }
+}
+
+.form {
+  &__row {
+    display: flex;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    &:first-child {
+      margin-right: .6rem;
+      width: 30%;
+    }
+  }
+
+  &__label {
+    font-size: $font-size-smaller;
+  }
+
+  &__input {
+    font-size: $font-size-smaller;
+    border: none;
+    border-radius: $border-radius;
+    margin: .4rem 0 .4rem;
+    padding: .2rem;
+  }
+
+  &__btn {
+    font-size: $font-size-smaller;
+    margin: .2rem;
+  }
+}

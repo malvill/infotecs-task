@@ -2,15 +2,16 @@ import data from '../data.json';
 
 
 export const state = {
-    users: data,
+    users: [],
     page: 1,
     resultsPerPage: 10,
-    sorting: {}
 }
 
 function transformUsersData() {
+    // В изначальных данных был еще номер телефона, но по заданию он не понадобился
     state.users = data.map(user => {
         return {
+            id: user.id,
             firstName: user.name.firstName,
             lastName: user.name.lastName,
             about: user.about,
@@ -29,7 +30,6 @@ export function getUsersPage(page = state.page) {
 }
 
 export function sortUsers(criteria, direction) {
-    if (state.sorting[criteria] === direction) return;
     const orderNumber = direction === 'up' ? 1 : -1;
     state.users.sort((user1, user2) => {
         if (user1[criteria] < user2[criteria]) {
@@ -40,9 +40,11 @@ export function sortUsers(criteria, direction) {
         }
         return 0
     })
+}
 
-    console.log(criteria, direction, state.users)
-
+export function updateUser(userChanged) {
+    let userToChange = state.users.find(user => user.id === userChanged.id);
+    Object.assign(userToChange, userChanged);
 }
 
 transformUsersData();

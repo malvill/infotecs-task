@@ -10,10 +10,14 @@ html {
 
 .title {
   text-align: center;
+  padding: 3rem 0 2rem;
+  font-size: 2.2rem;
   font-weight: $font-weight-bold;
 }
 
 .main {
+  width: 100%;
+  position: relative;
   font-size: $font-size-main;
 }
 
@@ -22,3 +26,13 @@ html {
   margin: 0 auto;
 }
 
+.btn {
+  border: 1px solid $color-darker;
+  padding: .5rem;
+  background-color: $color-row-bg;
+  border-radius: $border-radius;
+  @extend %transition;
+  &:hover {
+    @extend %box-shadow;
+  }
+}
