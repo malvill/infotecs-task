@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.1.1",
+    "boxicons": "^2.1.1",
+    "parcel": "^2.1.1",
+    "sass": "^1.47.0"
+  },
+  "name": "infotecs-task",
+  "version": "1.0.0",
+  "main": "src/js/controller.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malvill/infotecs-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malvill/infotecs-task/issues"
+  },
+  "homepage": "https://github.com/malvill/infotecs-task#readme",
+  "description": ""
+}
